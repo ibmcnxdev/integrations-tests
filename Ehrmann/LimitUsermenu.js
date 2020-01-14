@@ -12,6 +12,16 @@
 // @run-at       document-end
 //
 // ==/UserScript==
+
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+sleep(10000);
+
 console.log('typeof(dojo) = ' + typeof(dojo));
 if(typeof(dojo) != "undefined") {
 	require(["dojo/query", "dojo/dom-construct", "dojo/domReady!"], function(query, domConstruct){
