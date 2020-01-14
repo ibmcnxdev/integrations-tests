@@ -41,7 +41,7 @@ if(typeof(dojo) != "undefined") {
             waitFor( function(){
 			// wait until the "loading..." node has been hidden
 			// indicating that we have loaded content.
-   		       dojo.query("#bss-usersMenu li.userreports").forEach(domConstruct.destroy);
+   		       // dojo.query("#bss-usersMenu li.userreports").forEach(domConstruct.destroy);
 			   dojo.query("#bss-usersMenu li.downloads").forEach(domConstruct.destroy);
 			   dojo.query("#bss-usersMenu li.invite").forEach(domConstruct.destroy);			   		   
            },
