@@ -12,11 +12,12 @@
 // @run-at       document-end
 //
 // ==/UserScript==
-
+console.log('typeof(dojo) = ' + typeof(dojo));
 if(typeof(dojo) != "undefined") {
 	require(["dojo/query", "dojo/dom-construct", "dojo/domReady!"], function(query, domConstruct){
+	console.log('LimitUsermenu.js is being run !');
         try {
-	    console.log('LimitUsermenu.js is being run !');
+	    
             // utility function to let us wait for a specific element of the page to load...
             var waitFor = function(callback, elXpath, elXpathRoot, maxInter, waitTime) {
                 if(!elXpathRoot) var elXpathRoot = dojo.body();
@@ -51,6 +52,7 @@ if(typeof(dojo) != "undefined") {
            },
 		  "#bss-usersMenu");
       } catch(e) {
+	  console.log("Exception occurred in global/LimitUsermenu Customizer Extension" + e);
           alert("Exception occurred in global/LimitUsermenu Customizer Extension" + e);
       }
    });
