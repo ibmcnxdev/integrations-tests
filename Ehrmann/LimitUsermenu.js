@@ -12,10 +12,11 @@
 // @run-at       document-end
 //
 // ==/UserScript==
-console.log('LimitUsermenu.js is being run !');
+
 if(typeof(dojo) != "undefined") {
 	require(["dojo/query", "dojo/dom-construct", "dojo/domReady!"], function(query, domConstruct){
         try {
+	    console.log('LimitUsermenu.js is being run !');
             // utility function to let us wait for a specific element of the page to load...
             var waitFor = function(callback, elXpath, elXpathRoot, maxInter, waitTime) {
                 if(!elXpathRoot) var elXpathRoot = dojo.body();
@@ -40,6 +41,7 @@ if(typeof(dojo) != "undefined") {
 
             // here we use waitFor to wait on the mainContentDiv element
             // before we proceed to customize the page...
+	    console.log('About to call waitFor function');
             waitFor( function(){
 			// wait until the "loading..." node has been hidden
 			// indicating that we have loaded content.
