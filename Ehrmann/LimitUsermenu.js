@@ -19,7 +19,7 @@ if(typeof(dojo) != "undefined") {
             // utility function to let us wait for a specific element of the page to load...
             var waitFor = function(callback, elXpath, elXpathRoot, maxInter, waitTime) {
                 if(!elXpathRoot) var elXpathRoot = dojo.body();
-                if(!maxInter) var maxInter = 10000;  // number of intervals before expiring
+                if(!maxInter) var maxInter = 20000;  // number of intervals before expiring
                 if(!waitTime) var waitTime = 1;  // 1000=1 second
                 if(!elXpath) return;
                 var waitInter = 0;  // current interval
