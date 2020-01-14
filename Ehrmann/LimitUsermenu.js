@@ -12,7 +12,7 @@
 // @run-at       document-end
 //
 // ==/UserScript==
-
+console.log('LimitUsermenu.js is being run !');
 if(typeof(dojo) != "undefined") {
 	require(["dojo/query", "dojo/dom-construct", "dojo/domReady!"], function(query, domConstruct){
         try {
