@@ -22,8 +22,10 @@ if(typeof(dojo) != "undefined") {
                 if(!maxInter) var maxInter = 20000;  // number of intervals before expiring
                 if(!waitTime) var waitTime = 1;  // 1000=1 second
                 if(!elXpath) return;
+		console.log('Waiting for '+ elXpath + ' in ' + elXpathRoot);
                 var waitInter = 0;  // current interval
                 var intId = setInterval( function(){
+		    console.log('Query length = ' + dojo.query(elXpath,elXpathRoot).length);
                     if( ++waitInter<maxInter && !dojo.query(elXpath,elXpathRoot).length) return;
 
                     clearInterval(intId);
